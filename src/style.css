@@ -34,3 +34,7 @@ video.drawingBuffer {
   width: 400px;
   height: 300px;
 }
+
+[alt='Info icon'] {
+  display: none;
+}
