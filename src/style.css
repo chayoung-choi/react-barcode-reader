@@ -1,36 +1,36 @@
 .app {
-  color: white;
-  text-align: center;
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+    color: white;
+    text-align: center;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
 }
 
-.container {
-  position: relative;
-}
+/*.container {*/
+/*  position: relative;*/
+/*}*/
 
-.container,
-#interactive.viewport {
-  width: 400px;
-  height: 300px;
-}
+/*.container,*/
+/*#interactive.viewport {*/
+/*  width: 400px;*/
+/*  height: 300px;*/
+/*}*/
 
-#interactive.viewport canvas,
-video {
-  width: 400px;
-  height: 300px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+/*#interactive.viewport canvas,*/
+/*video {*/
+/*  width: 400px;*/
+/*  height: 300px;*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*}*/
 
-#interactive.viewport canvas.drawingBuffer,
-video.drawingBuffer {
-  width: 400px;
-  height: 300px;
-}
+/*#interactive.viewport canvas.drawingBuffer,*/
+/*video.drawingBuffer {*/
+/*  width: 400px;*/
+/*  height: 300px;*/
+/*}*/
