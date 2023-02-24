@@ -60,12 +60,17 @@ const IsbnReader = () => {
     const formats = [BarcodeFormat.QR_CODE, BarcodeFormat.CODE_39, BarcodeFormat.EAN_13];
     hints.set(DecodeHintType.POSSIBLE_FORMATS, formats);
 
-    const result = reader.decode(binaryBitmap, hints);
-    console.log("* result", result)
-    if (result && result.text.startsWith('ISBN')) {
-      const isbn = result.text.substr(5);
-      console.log(isbn);
-      setData(isbn)
+    try {
+      const result = reader.decode(binaryBitmap, hints);
+      console.log("* result", result)
+      if (result && result.text.startsWith('ISBN')) {
+        const isbn = result.text.substr(5);
+        console.log(isbn);
+        setData(isbn)
+      }
+
+    } catch (e) {
+      setData("" + e)
     }
 
     // const code = jsQR(imageData.data, width, height, {
@@ -99,7 +104,7 @@ const IsbnReader = () => {
           <Camera size="18" className="me-2"/>
           Scan ISBN
         </Button>
-        <p className="fs-6 bg-secondary mt-3 border rounded text-white">
+        <p className="fs-6 bg-secondary mt-3 border rounded text-white text-wrap">
           {data}
         </p>
       </div>

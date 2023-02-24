@@ -16,7 +16,6 @@ function App() {
       <section className="section-isbn-reader">
         <IsbnReader/>
       </section>
-
     </div>
   );
 }
